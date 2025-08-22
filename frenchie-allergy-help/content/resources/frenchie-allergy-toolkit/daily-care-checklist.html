@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frenchie Daily Care Checklist - Allergy Management</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #2C5282;
+            border-bottom: 3px solid #48BB78;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #2C5282;
+            margin-top: 30px;
+            background-color: #F7FAFC;
+            padding: 10px;
+            border-left: 4px solid #48BB78;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px 0;
+            border-bottom: 1px solid #EDF2F7;
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #2C5282;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .time {
+            color: #ED8936;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .notes {
+            background-color: #FEF5E7;
+            border: 1px solid #ED8936;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        
+        .emergency-box {
+            background-color: #FFEBEE;
+            border: 2px solid #F44336;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .emergency-box h3 {
+            color: #F44336;
+            margin-top: 0;
+        }
+        
+        .week-tracker {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin: 20px 0;
+        }
+        
+        .day-box {
+            border: 1px solid #2C5282;
+            padding: 10px;
+            text-align: center;
+            min-height: 50px;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #A0AEC0;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Frenchie Daily Allergy Care Checklist</h1>
+    <p><strong>Dog's Name:</strong> _________________ <strong>Date:</strong> _________________</p>
+    
+    <h2>🌅 Morning Routine (7:00 - 9:00 AM)</h2>
+    <ul class="checklist">
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">7:00</span> Check and clean facial folds with hypoallergenic wipes</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">7:15</span> Inspect ears for redness, odor, or discharge</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">7:20</span> Check paws and between toes for irritation</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">7:30</span> Morning medication (if prescribed): _________________</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">8:00</span> Serve allergy-friendly breakfast</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">8:30</span> Clean food/water bowls thoroughly</span>
+        </li>
+    </ul>
+    
+    <h2>☀️ Midday Check (12:00 - 2:00 PM)</h2>
+    <ul class="checklist">
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">12:00</span> Quick skin inspection for new hot spots or irritation</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">12:15</span> Apply topical treatments if needed: _________________</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">1:00</span> Midday supplements (Omega-3, probiotics): _________________</span>
+        </li>
+    </ul>
+    
+    <h2>🌆 Evening Routine (5:00 - 8:00 PM)</h2>
+    <ul class="checklist">
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">5:00</span> After-walk paw cleaning (remove allergens)</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">5:15</span> Brush coat gently to remove environmental allergens</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">6:00</span> Evening meal (allergy-friendly dinner)</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">7:00</span> Evening medication (if prescribed): _________________</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">7:30</span> Final fold cleaning and drying</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span><span class="time">8:00</span> Check and clean bedding if needed</span>
+        </li>
+    </ul>
+    
+    <div class="notes">
+        <h3>📝 Daily Observations</h3>
+        <p><strong>Itching Level (1-10):</strong> _____ <strong>Location:</strong> _________________</p>
+        <p><strong>Skin Condition:</strong> ☐ Normal ☐ Red ☐ Flaky ☐ Bumps ☐ Hot spots</p>
+        <p><strong>Energy Level:</strong> ☐ Normal ☐ Low ☐ Restless</p>
+        <p><strong>Appetite:</strong> ☐ Normal ☐ Decreased ☐ Increased</p>
+        <p><strong>Other Notes:</strong> _________________________________________________</p>
+    </div>
+    
+    <div class="emergency-box">
+        <h3>⚠️ Emergency Signs - See Vet Immediately</h3>
+        <ul>
+            <li>☐ Facial swelling or hives</li>
+            <li>☐ Difficulty breathing or excessive panting</li>
+            <li>☐ Severe scratching causing bleeding</li>
+            <li>☐ Lethargy with loss of appetite</li>
+            <li>☐ Vomiting or diarrhea (multiple episodes)</li>
+        </ul>
+        <p><strong>Emergency Vet:</strong> _________________ <strong>Phone:</strong> _________________</p>
+    </div>
+    
+    <h2>📅 Weekly Tracking Overview</h2>
+    <div class="week-tracker">
+        <div class="day-box"><strong>Mon</strong><br>Good ☐<br>Fair ☐<br>Poor ☐</div>
+        <div class="day-box"><strong>Tue</strong><br>Good ☐<br>Fair ☐<br>Poor ☐</div>
+        <div class="day-box"><strong>Wed</strong><br>Good ☐<br>Fair ☐<br>Poor ☐</div>
+        <div class="day-box"><strong>Thu</strong><br>Good ☐<br>Fair ☐<br>Poor ☐</div>
+        <div class="day-box"><strong>Fri</strong><br>Good ☐<br>Fair ☐<br>Poor ☐</div>
+        <div class="day-box"><strong>Sat</strong><br>Good ☐<br>Fair ☐<br>Poor ☐</div>
+        <div class="day-box"><strong>Sun</strong><br>Good ☐<br>Fair ☐<br>Poor ☐</div>
+    </div>
+    
+    <h2>🗓️ Weekly Tasks (Check when completed)</h2>
+    <ul class="checklist">
+        <li>
+            <div class="checkbox"></div>
+            <span>☐ Monday: Deep clean all skin folds</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span>☐ Wednesday: Medicated bath (if prescribed)</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span>☐ Friday: Ear cleaning with vet-approved solution</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span>☐ Saturday: Wash bedding in hot water</span>
+        </li>
+        <li>
+            <div class="checkbox"></div>
+            <span>☐ Sunday: Nail trim and paw pad check</span>
+        </li>
+    </ul>
+    
+    <div class="footer">
+        <p>From the Frenchie Allergy Toolkit © FrenchiAllergyHelp.com</p>
+        <p class="no-print">Print multiple copies for daily use</p>
+    </div>
+</body>
+</html>
