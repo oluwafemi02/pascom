@@ -13,7 +13,26 @@
 
 // Load WordPress
 if (!defined('ABSPATH')) {
-    require_once('../../../wp-load.php');
+    // Try multiple paths to find wp-load.php
+    $paths = [
+        '../../../wp-load.php',
+        '../../wp-load.php',
+        '../wp-load.php',
+        '../../../../wp-load.php'
+    ];
+    
+    $wp_loaded = false;
+    foreach ($paths as $path) {
+        if (file_exists($path)) {
+            require_once($path);
+            $wp_loaded = true;
+            break;
+        }
+    }
+    
+    if (!$wp_loaded) {
+        die('Error: Could not find wp-load.php. Please ensure this script is in the wp-content directory.');
+    }
 }
 
 class FrenchieAllergySetup {
@@ -23,7 +42,23 @@ class FrenchieAllergySetup {
     private $created_posts = [];
     
     public function __construct() {
-        $this->content_path = dirname(__FILE__) . '/../../site-content/';
+        // Updated path to look for import-content folder in the same directory
+        $this->content_path = dirname(__FILE__) . '/../import-content/site-content/';
+        
+        // Fallback to check if content is in a different location
+        if (!file_exists($this->content_path)) {
+            $this->content_path = dirname(__FILE__) . '/import-content/site-content/';
+        }
+        
+        // Another fallback for different directory structures
+        if (!file_exists($this->content_path)) {
+            $this->content_path = dirname(__FILE__) . '/../site-content/';
+        }
+        
+        // Final check and provide helpful error
+        if (!file_exists($this->content_path)) {
+            die("Error: Content directory not found. Please ensure 'import-content' folder is uploaded alongside this script.\n");
+        }
     }
     
     /**
@@ -102,11 +137,11 @@ class FrenchieAllergySetup {
             ],
             'privacy-policy' => [
                 'title' => 'Privacy Policy',
-                'file' => '../legal-pages/privacy-policy.html'
+                'file' => '../import-content/legal-pages/privacy-policy.html'
             ],
             'affiliate-disclosure' => [
                 'title' => 'Affiliate Disclosure',
-                'file' => '../legal-pages/affiliate-disclosure.html'
+                'file' => '../import-content/legal-pages/affiliate-disclosure.html'
             ],
             'contact' => [
                 'title' => 'Contact',
