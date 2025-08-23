@@ -1,0 +1,33 @@
+FRENCHIE ALLERGY HELP - INSTALLATION INSTRUCTIONS
+================================================
+
+1. UPLOAD THEME:
+   - Upload /themes/frenchie-care/ to your-site/wp-content/themes/
+   - Activate in WordPress Admin → Appearance → Themes
+
+2. UPLOAD PLUGINS:
+   - Upload contents of /plugins/ to your-site/wp-content/plugins/
+   - Activate in WordPress Admin → Plugins
+
+3. RUN AUTOMATION (Choose one method):
+
+   Method A - PHP Script:
+   - Upload /automation/setup-automation.php to wp-content/
+   - Upload /import-content/ folder to same directory as script
+   - Visit: http://your-site.com/wp-content/setup-automation.php
+
+   Method B - WP-CLI:
+   - Upload /automation/wp-cli-setup.sh to WordPress root
+   - Upload /import-content/ folder to WordPress root
+   - Run: ./wp-cli-setup.sh
+
+   Method C - Manual:
+   - Follow the guide in COMPLETE-SETUP-GUIDE.md
+
+4. POST-INSTALLATION:
+   - Configure email settings (WP Mail SMTP)
+   - Add your affiliate links
+   - Install recommended plugins
+   - Configure SEO settings
+
+Need help? Check COMPLETE-SETUP-GUIDE.md for detailed instructions.
