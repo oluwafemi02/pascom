@@ -13,7 +13,7 @@
 
 // Load WordPress
 if (!defined('ABSPATH')) {
-    require_once('../../../wp-load.php');
+    require_once('../wp-load.php');
 }
 
 class FrenchieAllergySetup {
@@ -23,7 +23,7 @@ class FrenchieAllergySetup {
     private $created_posts = [];
     
     public function __construct() {
-        $this->content_path = dirname(__FILE__) . '/../../site-content/';
+        $this->content_path = dirname(__FILE__) . '/import-content/';
     }
     
     /**
